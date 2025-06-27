@@ -9,7 +9,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       background: linear-gradient(to bottom, #000000 0%, #f2c94c 100%);
@@ -24,26 +28,26 @@
 
     .cartao {
       background: rgba(0, 0, 0, 0.85);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 30px 20px;
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
+      border: 1.5px solid #f2c94c;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
       text-align: center;
+      backdrop-filter: blur(2px);
     }
 
     .logo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 35%; /* Foca mais no centro superior */
-  margin-bottom: 20px;
-  border: 2px solid #f2c94c;
-  background: black;
-  transform: scale(1.1); /* Aumenta levemente o zoom */
-}
-
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 40%;
+      margin-bottom: 20px;
+      border: 3px solid #f2c94c;
+      background: black;
+    }
 
     h1 {
       font-size: 26px;
@@ -68,10 +72,10 @@
       color: #f2c94c;
       border: 2px solid #f2c94c;
       padding: 12px;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      margin: 8px 0;
+      margin: 10px 0;
       width: 100%;
       transition: all 0.4s ease;
       position: relative;
@@ -103,9 +107,10 @@
     }
 
     footer {
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 13px;
-      color: #ccc;
+      color: #f2c94c;
+      text-shadow: 0 0 5px #f2c94c;
     }
 
     @media (max-width: 480px) {
@@ -117,14 +122,12 @@
 <body>
 
   <div class="cartao">
-    <!-- LOGO da barbearia -->
-    <img src="1000073240.jpg" alt="Logo da Abner BarberShop" class="logo" />
+    <!-- LOGO com fundo transparente -->
+    <img src="1000073240.png" alt="Logo da Abner BarberShop" class="logo" />
 
-    <!-- Nome + slogan -->
     <h1>Abner BarberShop</h1>
     <p class="slogan">Estilo é estar bem.</p>
 
-    <!-- Botões interativos -->
     <a href="https://wa.me/5571986471294?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Abner%20BarberShop" target="_blank" class="botao">
       <i class="fab fa-whatsapp"></i> <span>Agendar no WhatsApp</span>
     </a>
@@ -142,7 +145,7 @@
     </a>
   </div>
 
-  <footer>Feito por Eliel ✂️</footer>
+  <footer>Feito por Eliel 💈</footer>
 
 </body>
 </html>
