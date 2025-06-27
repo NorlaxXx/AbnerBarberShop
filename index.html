@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abner BarberShop | Link na Bio</title>
 
+  <!-- Fonte elegante -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
@@ -12,7 +13,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #111;
+      background: #000;
       font-family: 'Roboto Mono', monospace;
       color: #fff;
       display: flex;
@@ -22,12 +23,12 @@
     }
 
     .cartao {
-      background: #1b1b1b;
+      background: #111;
       border-radius: 16px;
       padding: 30px 20px;
       max-width: 400px;
       width: 100%;
-      box-shadow: 0 0 20px #222;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
       text-align: center;
     }
 
@@ -38,18 +39,21 @@
       object-fit: cover;
       object-position: center;
       margin-bottom: 20px;
-      border: 2px solid #fff;
+      border: 2px solid #f2c94c;
     }
 
     h1 {
       font-size: 26px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
+      color: #f2c94c;
     }
 
-    p {
-      font-size: 14px;
-      color: #ccc;
+    .slogan {
+      font-size: 15px;
       margin-bottom: 24px;
+      color: #f2c94c;
+      font-style: italic;
+      text-shadow: 0 0 5px #f2c94c66;
     }
 
     .botao {
@@ -57,31 +61,53 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #333;
-      color: #fff;
-      border: none;
+      background: transparent;
+      color: #f2c94c;
+      border: 2px solid #f2c94c;
       padding: 12px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       margin: 8px 0;
       width: 100%;
-      transition: 0.3s;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .botao::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0%;
+      top: 0;
+      left: 0;
+      background: #f2c94c;
+      z-index: 0;
+      transition: height 0.3s ease;
+    }
+
+    .botao:hover::before {
+      height: 100%;
     }
 
     .botao:hover {
-      background: #f2c94c;
       color: #000;
     }
 
     .botao i {
       font-size: 18px;
+      z-index: 1;
+    }
+
+    .botao span {
+      z-index: 1;
     }
 
     footer {
       margin-top: 20px;
       font-size: 13px;
-      color: #777;
+      color: #999;
     }
 
     @media (max-width: 480px) {
@@ -93,28 +119,28 @@
 <body>
 
   <div class="cartao">
-    <!-- Imagem de perfil (substitua o nome se renomear) -->
+    <!-- Imagem de perfil -->
     <img src="1000073240.jpg" alt="Logo da Abner BarberShop" class="logo" />
 
-    <!-- Nome e descrição -->
+    <!-- Nome e slogan -->
     <h1>Abner BarberShop</h1>
-    <p>Estilo é estar bem.</p>
+    <p class="slogan">Estilo é estar bem.</p>
 
-    <!-- Botões personalizados -->
+    <!-- Botões -->
     <a href="https://wa.me/5571986471294?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Abner%20BarberShop" target="_blank" class="botao">
-      <i class="fab fa-whatsapp"></i> Agendar no WhatsApp
+      <i class="fab fa-whatsapp"></i> <span>Agendar no WhatsApp</span>
     </a>
 
     <a href="https://www.instagram.com/abnerbarber.shop/" target="_blank" class="botao">
-      <i class="fab fa-instagram"></i> Instagram
+      <i class="fab fa-instagram"></i> <span>Instagram</span>
     </a>
 
     <a href="https://maps.google.com/?q=Abner+BarberShop" target="_blank" class="botao">
-      <i class="fas fa-map-marker-alt"></i> Como Chegar
+      <i class="fas fa-map-marker-alt"></i> <span>Como Chegar</span>
     </a>
 
     <a href="https://okaut.com/abner.bonfim.oliveira.d3.ea" target="_blank" class="botao">
-      <i class="fas fa-calendar-check"></i> Reservar Online
+      <i class="fas fa-calendar-check"></i> <span>Reservar Online</span>
     </a>
   </div>
 
